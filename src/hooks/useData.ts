@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import apiClient from "../services/api-client";
-import { CanceledError } from "axios";
+import { AxiosRequestConfig, CanceledError } from "axios";
 
 
 //generic respose type like FetchGenresResponse
@@ -11,7 +11,7 @@ interface FetchResponse  <T>
 }
 // generic type perimeter T
 //here end point is the url end point
-const useData = <T>(endpoint: string) => {
+const useData = <T>(endpoint: string, requestConfig ?:AxiosRequestConfig, deps?:any[]) => {
     const [data, setData] = useState<T[]>([]);
     const [error, setErrors] = useState("");
     const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +20,7 @@ const useData = <T>(endpoint: string) => {
         const controller = new AbortController();
         setIsLoading(true)  
       apiClient
-        .get<FetchResponse <T>>(endpoint, {signal: controller.signal})
+        .get<FetchResponse <T>>(endpoint, {signal: controller.signal, ...requestConfig})
         .then((res) => {
             // console.log(res.data.results[0].parent_platforms)
                 setData(res.data.results)
@@ -33,7 +33,7 @@ const useData = <T>(endpoint: string) => {
         });
         return () => controller.abort();
       
-    }, []);
+    }, deps ?  [...deps] : []);
     return { data, error , isLoading};
 }
 
