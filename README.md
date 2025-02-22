@@ -15,7 +15,7 @@ To get started with the Game Hub project, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/game-hub.git
+   git clone https://github.com/shersheryar/game-hub-typescript-reactjs.git
    cd game-hub
    ```
 
