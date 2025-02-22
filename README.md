@@ -1,30 +1,51 @@
-# React + TypeScript + Vite
+# Game Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
+Game Hub is a web application built with Vite, React, and TypeScript. It provides a platform for users to explore and discover various games, featuring a user-friendly interface and responsive design.
 
-Currently, two official plugins are available:
+## Features
+- Browse through a collection of games.
+- Detailed game information and ratings.
+- Responsive design for mobile and desktop users.
+- Smooth animations using Framer Motion.
+- Built with Chakra UI for a modern UI experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+To get started with the Game Hub project, follow these steps:
 
-## Expanding the ESLint configuration
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/game-hub.git
+   cd game-hub
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+4. Open your browser and navigate to `http://localhost:3000` to see the application in action.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Usage
+- Use the navigation bar to browse different game categories.
+- Click on a game to view more details, including ratings and descriptions.
+
+## Scripts
+- `npm run dev`: Start the development server.
+- `npm run build`: Build the application for production.
+- `npm run lint`: Run ESLint to check for code quality issues.
+- `npm run preview`: Preview the production build.
+
+## License
+This project is licensed under the MIT License.
+
+## Acknowledgments
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Chakra UI](https://chakra-ui.com/)
+- [Framer Motion](https://www.framer.com/motion/)
